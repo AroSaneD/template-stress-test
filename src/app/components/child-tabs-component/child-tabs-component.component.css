@@ -1,0 +1,18 @@
+.tabs{
+    display: flex; 
+    width: 400px;
+    justify-content: space-evenly;
+}
+
+.tabs > div{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.children{
+    display: flex;
+}
+
+.children > div{
+    flex-basis: 25%;
+}

@@ -1,3 +1,9 @@
-<p>
-  child-tabs-component works!
-</p>
+<div class="tabs">
+  <div>general</div>
+  <div>additional</div>
+  <div>reports</div>
+</div>
+
+<div class="children" *ngFor="let child of objects">
+  {{child.name}}
+</div>

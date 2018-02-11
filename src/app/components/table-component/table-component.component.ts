@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { TestChildObject } from './../../model/testChildObject';
 import { TestObject } from './../../model/testObject';
 import { Component, OnInit } from '@angular/core';
@@ -9,25 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    for (let i = 0; i < 15; i++) {
+      var children = [];
 
-  elements: TestObject[] = [
-    new TestObject('hello', 1, 2, [
-      new TestChildObject('test1', 0, null),
-      new TestChildObject('test2', 1, true),
-      new TestChildObject('test3', 2, false),
-    ]),
-    new TestObject('there', 1, 2, [
-      new TestChildObject('test1', 0, null),
-      new TestChildObject('test2', 1, true),
-      new TestChildObject('test3', 2, false),
-    ]),
-    new TestObject('world', 1, 2, [
-      new TestChildObject('test1', 0, null),
-      new TestChildObject('test2', 1, true),
-      new TestChildObject('test3', 2, false),
-    ]),
-  ];
+      for (let j = 0; j < 10; j++) {
+        children.push(new TestChildObject(`test${j}`, j, j % 2 == 0));
+      }
+
+      this.elements.push(new TestObject(`hello${i}`, 1, 2, children));
+    }
+
+  }
+
+  elements: TestObject[] = [];
 
   ngOnInit() {
   }
