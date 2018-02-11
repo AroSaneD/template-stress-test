@@ -1,0 +1,9 @@
+.cells-holder{
+    display: flex;
+}
+
+.cells-holder > div{
+    flex-basis: 25%;
+    display: inline-block;
+    text-align: center;
+}

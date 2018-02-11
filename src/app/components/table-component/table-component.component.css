@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+}
+.header >  div{
+    flex-basis: 25%;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
