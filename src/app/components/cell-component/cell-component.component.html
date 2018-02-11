@@ -3,4 +3,8 @@
   <div>{{inputObject.nr1}}</div>
   <div>{{inputObject.nr2}}</div>
   <div>TBA</div>
+  <div style="padding: 10px; border: 1px solid red; cursor: pointer" (click)="toggleCollapse()">
+    <span *ngIf="collapsed; else elseBlock">+</span>
+    <ng-template #elseBlock>-</ng-template>
+  </div>
 </div>

@@ -10,10 +10,16 @@ import { TestObject } from '../../model/testObject';
 export class CellComponentComponent implements OnInit {
 
   @Input() inputObject: TestObject;
+  public collapsed: boolean = true;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleCollapse(): void{
+    this.collapsed = !this.collapsed;
+    console.log("new collapsed value: ", this.collapsed);
   }
 
 }
