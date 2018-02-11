@@ -1,3 +1,7 @@
 <h1>
   table-component works!
 </h1>
+
+<div style="border: 1px solid black">
+  <app-cell-component *ngFor="let e of elements" [inputObject]="e"></app-cell-component>
+</div>
