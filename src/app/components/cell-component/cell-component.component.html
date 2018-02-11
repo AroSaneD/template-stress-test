@@ -1,10 +1,16 @@
-<div class="cells-holder" style="border: 1px solid green">
-  <div>{{inputObject.name}}</div>
-  <div>{{inputObject.nr1}}</div>
-  <div>{{inputObject.nr2}}</div>
-  <div>TBA</div>
-  <div style="padding: 10px; border: 1px solid red; cursor: pointer" (click)="toggleCollapse()">
-    <span *ngIf="collapsed; else elseBlock">+</span>
-    <ng-template #elseBlock>-</ng-template>
+<div style="border: 1px solid green">
+  <div class="cells-holder">
+    <div>{{inputObject.name}}</div>
+    <div>{{inputObject.nr1}}</div>
+    <div>{{inputObject.nr2}}</div>
+    <div>TBA</div>
+    <div style="padding: 10px; border: 1px solid red; cursor: pointer" (click)="toggleCollapse()">
+      <span *ngIf="collapsed; else elseBlock">+</span>
+      <ng-template #elseBlock>-</ng-template>
+    </div>
+  </div>
+
+  <div *ngIf="!collapsed">
+    <app-child-tabs-component [objects]="inputObject.children"></app-child-tabs-component>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TestChildObject } from '../../model/testChildObject';
 
 @Component({
   selector: 'app-child-tabs-component',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ChildTabsComponentComponent implements OnInit {
 
   constructor() { }
+
+  @Input() objects: TestChildObject[];
 
   ngOnInit() {
   }
